@@ -11,7 +11,7 @@ export const instant = false;
 
 export default async function PortfolioPage() {
   await connection();
-  
+
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/login");
@@ -35,7 +35,7 @@ export default async function PortfolioPage() {
         {/* Left: Upload Form */}
         <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 h-fit">
           <h2 className="text-xl font-semibold mb-4 text-[#1A1A2E]">Add New Image</h2>
-          {/* We'll create this client component next */}
+         
           <UploadForm />
         </div>
 
